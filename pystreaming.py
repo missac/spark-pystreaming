@@ -102,10 +102,10 @@ class MustangStream():
     def dealData(self):
         try:
             data = None
-            if self.dataSource == 'phoenix1':
-                data = source.phoenix1(self)
-            elif self.dataSource == 'phoenix2':
-                data = source.phoenix2(self) 
+            if self.dataSource == 'kafka1':
+                data = source.kafka1(self)
+            elif self.dataSource == 'kafka2':
+                data = source.kafka2(self) 
             elif self.dataSource == 'socket':
                 data = source.socket(self)
             else:

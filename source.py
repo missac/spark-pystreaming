@@ -5,12 +5,12 @@ from confhelper import ConfigHelper
 
 cfHelper = ConfigHelper()
 
-def phoenix1(ms):
-    #read from phoenix var high level api
-    zk = cfHelper.phoenix1_zk
-    topics = cfHelper.phoenix1_topics
-    numThreads = cfHelper.phoenix1_num_threads
-    group = cfHelper.phoenix1_groupid
+def kafka1(ms):
+    #read from kafka var high level api
+    zk = cfHelper.kafka1_zk
+    topics = cfHelper.kafka1_topics
+    numThreads = cfHelper.kafka1_num_threads
+    group = cfHelper.kafka1_groupid
 
     topicList = topics.split(',')
     topicMap = dict((i, numThreads) for i in topicList)
@@ -22,11 +22,11 @@ def phoenix1(ms):
     lines = kvs.map(lambda x: x[1])
     return lines 
 
-def phoenix2(ms):
-    #read from phoenix var direct method
-    topics = cfHelper.phoenix2_topics
-    brokers = cfHelper.phoenix2_brokers
-    group = cfHelper.phoenix2_groupid
+def kafka2(ms):
+    #read from kafka var direct method
+    topics = cfHelper.kafka2_topics
+    brokers = cfHelper.kafka2_brokers
+    group = cfHelper.kafka2_groupid
 
     topicList = topics.split(',')
     params = {"metadata.broker.list": brokers,

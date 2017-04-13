@@ -39,16 +39,16 @@ class ConfigHelper(object):
             cls.stork_table = cf.get('stork', 'stork_table')
             cls.mode= cf.get('stork', 'stork_mode') 
 
-            #read phoenix1
-            cls.phoenix1_zk = cf.get('phoenix1', 'zk')
-            cls.phoenix1_topics = cf.get('phoenix1', 'topics')
-            cls.phoenix1_num_threads = cf.get('phoenix1', 'num_threads')
-            cls.phoenix1_groupid = cf.get('phoenix1', 'group_id')
-            #read phoenix2
-            cls.phoenix2_brokers = cf.get('phoenix2', 'brokers')
-            cls.phoenix2_topics = cf.get('phoenix2', 'topics')
-            cls.phoenix2_groupid = cf.get('phoenix2', 'group_id')
-            cls.phoenix2_offset_reset  = cf.get('phoenix2', 'offset_reset')
+            #read kafka1
+            cls.kafka1_zk = cf.get('kafka1', 'zk')
+            cls.kafka1_topics = cf.get('kafka1', 'topics')
+            cls.kafka1_num_threads = cf.get('kafka1', 'num_threads')
+            cls.kafka1_groupid = cf.get('kafka1', 'group_id')
+            #read kafka2
+            cls.kafka2_brokers = cf.get('kafka2', 'brokers')
+            cls.kafka2_topics = cf.get('kafka2', 'topics')
+            cls.kafka2_groupid = cf.get('kafka2', 'group_id')
+            cls.kafka2_offset_reset  = cf.get('kafka2', 'offset_reset')
             #read socket
             cls.socket_host = cf.get('socket', 'socket_host')
             cls.socket_port = cf.get('socket', 'socket_port')
